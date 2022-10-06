@@ -1,8 +1,8 @@
 package com.vinaymj.simplenewsapp.domain.usecase
 
-import com.vinaymj.simplenewsapp.data.api.Response
-import com.vinaymj.simplenewsapp.data.model.News
-import com.vinaymj.simplenewsapp.domain.repository.NewsRepository
+import com.vinaymj.news.headline.domain.model.News
+import com.vinaymj.news.headline.domain.repository.NewsRepository
+import com.vinaymj.simplenewsapp.core.api.Response
 import javax.inject.Inject
 
 /**

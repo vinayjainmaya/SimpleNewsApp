@@ -1,9 +1,9 @@
 package com.vinaymj.simplenewsapp.di
 
-import com.vinaymj.simplenewsapp.data.api.NewsService
-import com.vinaymj.simplenewsapp.data.repository.NewsRepositoryImpl
-import com.vinaymj.simplenewsapp.domain.repository.NewsRepository
-import com.vinaymj.simplenewsapp.utils.Constants.Companion.BASE_URL
+import com.vinaymj.news.headline.data.api.NewsService
+import com.vinaymj.news.headline.data.repository.NewsRepositoryImpl
+import com.vinaymj.news.headline.domain.repository.NewsRepository
+import com.vinaymj.simplenewsapp.core.utils.Constants.Companion.BASE_URL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

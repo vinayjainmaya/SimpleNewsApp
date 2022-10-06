@@ -15,7 +15,7 @@ android {
         targetSdk 32
         versionCode 1
         versionName "1.0"
-        buildConfigField("String", "API_KEY", NEWS_KEY)
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -43,6 +43,11 @@ dependencies {
     implementation "androidx.appcompat:appcompat:1.5.1"
     implementation "com.google.android.material:material:1.6.1"
     implementation "androidx.constraintlayout:constraintlayout:2.1.4"
+    implementation project(path: ':core')
+    implementation project(path: ':news-headline-uk:presentation')
+    implementation project(path: ':news-headline-uk:domain')
+    implementation project(path: ':news-headline:domain')
+    implementation project(path: ':news-headline:data')
 
     // Lifecycle
     def lifecycle = "2.5.1"
@@ -55,14 +60,10 @@ dependencies {
     implementation "androidx.navigation:navigation-ui-ktx:$navigation"
 
     // Hilt
-    def hilt = "1.0.0"
-    implementation "androidx.hilt:hilt-work:$hilt"
-    implementation "androidx.hilt:hilt-compiler:$hilt"
-    kapt "androidx.hilt:hilt-compiler:$hilt"
-
     def dagger_hilt = "2.42"
     implementation "com.google.dagger:hilt-android:$dagger_hilt"
     kapt "com.google.dagger:hilt-android-compiler:$dagger_hilt"
+
 
     // Retrofit
     def retrofit = "2.9.0"

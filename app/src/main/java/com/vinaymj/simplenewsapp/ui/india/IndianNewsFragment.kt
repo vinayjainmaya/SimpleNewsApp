@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import com.vinaymj.simplenewsapp.data.api.Response
+import com.vinaymj.simplenewsapp.core.api.Response
+import com.vinaymj.simplenewsapp.core.utils.OnItemClickListener
 import com.vinaymj.simplenewsapp.databinding.FragmentIndiaBinding
-import com.vinaymj.simplenewsapp.ui.OnItemClickListener
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

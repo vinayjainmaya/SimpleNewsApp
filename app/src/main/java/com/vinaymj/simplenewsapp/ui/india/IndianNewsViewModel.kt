@@ -4,10 +4,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.vinaymj.simplenewsapp.data.api.Response
-import com.vinaymj.simplenewsapp.data.model.News
+import com.vinaymj.news.headline.domain.model.News
+import com.vinaymj.simplenewsapp.core.api.Response
 import com.vinaymj.simplenewsapp.domain.usecase.GetIndiaNewsUseCase
-import com.vinaymj.simplenewsapp.utils.Event
+import com.vinaymj.simplenewsapp.core.utils.Event
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

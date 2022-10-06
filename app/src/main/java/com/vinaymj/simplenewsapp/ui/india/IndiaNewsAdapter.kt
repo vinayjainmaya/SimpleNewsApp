@@ -3,10 +3,10 @@ package com.vinaymj.simplenewsapp.ui.india
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.vinaymj.news.headline.domain.model.Article
 import com.vinaymj.simplenewsapp.R
-import com.vinaymj.simplenewsapp.data.model.Article
+import com.vinaymj.simplenewsapp.core.utils.OnItemClickListener
 import com.vinaymj.simplenewsapp.databinding.NewsItemBinding
-import com.vinaymj.simplenewsapp.ui.OnItemClickListener
 
 /**
  * Created by vinaymj on 06/10/22.
