@@ -1,7 +1,6 @@
 
 # SimpleNewsApp
 Simple android app trying to demonstrate the Multi-Module with MVVM and Jetpack components
-> Note : Please refer branch `feature/multi_module`
 
 Modularisation is done based in feature and then layer
 - app
