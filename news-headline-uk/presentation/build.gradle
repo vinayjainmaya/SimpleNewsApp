@@ -42,8 +42,8 @@ dependencies {
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation project(path: ':core')
-    implementation project(path: ':news-headline-uk:domain')
     implementation project(path: ':news-headline:domain')
+    implementation project(path: ':news-headline-uk:domain')
 
     // Hilt
     def dagger_hilt = "2.42"

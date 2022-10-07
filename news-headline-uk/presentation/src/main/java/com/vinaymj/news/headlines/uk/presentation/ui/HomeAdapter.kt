@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.vinaymj.news.headline.domain.model.Article
 import com.vinaymj.news.headlines.uk.presentation.R
-import com.vinaymj.news.headlines.uk.presentation.databinding.NewsItemBinding
+import com.vinaymj.news.headlines.uk.presentation.databinding.UkNewsItemBinding
 import com.vinaymj.simplenewsapp.core.utils.OnItemClickListener
 
 /**
@@ -18,7 +18,7 @@ class HomeAdapter(
 
     private var items: List<Article> = listOf()
 
-    inner class HomeViewHolder(val binding: NewsItemBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class HomeViewHolder(val binding: UkNewsItemBinding) : RecyclerView.ViewHolder(binding.root) {
         init {
             binding.rootLayout.setOnClickListener {
 //                listener.onItemClick(items[adapterPosition])
@@ -27,8 +27,8 @@ class HomeAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.news_item, parent, false)
-        val binding by lazy { NewsItemBinding.bind(view) }
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.uk_news_item, parent, false)
+        val binding by lazy { UkNewsItemBinding.bind(view) }
 
         return HomeViewHolder(binding)
     }

@@ -1,4 +1,4 @@
-package com.vinaymj.news.headlines.india.presentation
+package com.vinaymj.news.headline.india.presentation
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.vinaymj.news.headlines.india.presentation.test", appContext.packageName)
+        assertEquals("com.vinaymj.news.headline.india.presentation.test", appContext.packageName)
     }
 }

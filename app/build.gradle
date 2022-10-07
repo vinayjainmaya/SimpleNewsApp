@@ -43,17 +43,20 @@ dependencies {
     implementation "androidx.appcompat:appcompat:1.5.1"
     implementation "com.google.android.material:material:1.6.1"
     implementation "androidx.constraintlayout:constraintlayout:2.1.4"
+
     implementation project(path: ':core')
-    implementation project(path: ':news-headline-uk:presentation')
-    implementation project(path: ':news-headline-uk:domain')
-    implementation project(path: ':news-headline:domain')
     implementation project(path: ':news-headline:data')
+    implementation project(path: ':news-headline:domain')
+    implementation project(path: ':news-headline-uk:domain')
+    implementation project(path: ':news-headline-uk:presentation')
+    implementation project(path: ':news-headline-india:domain')
+    implementation project(path: ':news-headline-india:presentation')
 
     // Lifecycle
     def lifecycle = "2.5.1"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle"
-//
+
     // Navigation
     def navigation = "2.5.2"
     implementation "androidx.navigation:navigation-fragment-ktx:$navigation"

@@ -1,4 +1,4 @@
-package com.vinaymj.simplenewsapp.ui.india
+package com.vinaymj.news.headline.india.presentation.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,13 +7,12 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import com.vinaymj.news.headline.india.presentation.databinding.FragmentIndiaBinding
 import com.vinaymj.simplenewsapp.core.api.Response
-import com.vinaymj.simplenewsapp.core.utils.OnItemClickListener
-import com.vinaymj.simplenewsapp.databinding.FragmentIndiaBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class IndianNewsFragment : Fragment(), OnItemClickListener {
+class IndianNewsFragment : Fragment(), com.vinaymj.simplenewsapp.core.utils.OnItemClickListener {
 
     private var _binding: FragmentIndiaBinding? = null
     private val indianNewsViewModel: IndianNewsViewModel by activityViewModels()
@@ -37,7 +36,7 @@ class IndianNewsFragment : Fragment(), OnItemClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        indianNewsViewModel.getTopHeadlines("IN")
+        indianNewsViewModel.getTopHeadlines("in")
         setObserver()
     }
 

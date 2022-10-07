@@ -1,4 +1,4 @@
-package com.vinaymj.news.headlines.india.presentation
+package com.vinaymj.news.headline.india.presentation
 
 import org.junit.Test
 

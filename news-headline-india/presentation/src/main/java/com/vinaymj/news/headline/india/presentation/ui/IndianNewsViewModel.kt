@@ -1,12 +1,12 @@
-package com.vinaymj.simplenewsapp.ui.india
+package com.vinaymj.news.headline.india.presentation.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.vinaymj.news.headline.domain.model.News
+import com.vinaymj.news.headline.india.domain.usecase.GetIndiaNewsUseCase
 import com.vinaymj.simplenewsapp.core.api.Response
-import com.vinaymj.simplenewsapp.domain.usecase.GetIndiaNewsUseCase
 import com.vinaymj.simplenewsapp.core.utils.Event
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers

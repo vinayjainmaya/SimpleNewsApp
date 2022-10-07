@@ -1,4 +1,4 @@
-package com.vinaymj.simplenewsapp.domain.usecase
+package com.vinaymj.news.headline.india.domain.usecase
 
 import com.vinaymj.news.headline.domain.model.News
 import com.vinaymj.news.headline.domain.repository.NewsRepository
