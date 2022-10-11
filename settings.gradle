@@ -14,11 +14,12 @@ dependencyResolutionManagement {
 }
 rootProject.name = "SimpleNewsApp"
 include ':app'
-include ':news-details:presentation'
+include ':core'
 include ':news-headline:data'
 include ':news-headline:domain'
-include ':news-headline-uk:presentation'
-include ':core'
-include ':news-headline-uk:domain'
-include ':news-headline-india:domain'
-include ':news-headline-india:presentation'
+include ':news-headline:presentation'
+include ':news-details:presentation'
+//include ':news-headline-uk:presentation'
+//include ':news-headline-uk:domain'
+//include ':news-headline-india:domain'
+//include ':news-headline-india:presentation'

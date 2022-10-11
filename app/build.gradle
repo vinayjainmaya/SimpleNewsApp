@@ -47,10 +47,7 @@ dependencies {
     implementation project(path: ":core")
     implementation project(path: ":news-headline:data")
     implementation project(path: ":news-headline:domain")
-    implementation project(path: ":news-headline-uk:domain")
-    implementation project(path: ":news-headline-uk:presentation")
-    implementation project(path: ":news-headline-india:domain")
-    implementation project(path: ":news-headline-india:presentation")
+    implementation project(path: ":news-headline:presentation")
 
     // Lifecycle
     def lifecycle = "2.5.1"

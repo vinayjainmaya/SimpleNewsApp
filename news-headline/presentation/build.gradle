@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace 'com.vinaymj.news.headline.domain'
+    namespace 'com.vinaymj.news.headline.presentation'
     compileSdk 32
 
     defaultConfig {
@@ -30,6 +30,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -37,17 +40,24 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.6.1'
+    implementation project(path: ':news-headline:domain')
     implementation project(path: ':core')
-
-    // Retrofit
-    def retrofit = "2.9.0"
-    implementation "com.squareup.retrofit2:retrofit:$retrofit"
-    implementation "com.squareup.retrofit2:converter-gson:$retrofit"
 
     // Hilt
     def dagger_hilt = "2.42"
     implementation "com.google.dagger:hilt-android:$dagger_hilt"
     kapt "com.google.dagger:hilt-android-compiler:$dagger_hilt"
+
+    // Lifecycle
+    def lifecycle = "2.5.1"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle"
+
+    // Navigation
+    def navigation = "2.5.2"
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation"
+
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
