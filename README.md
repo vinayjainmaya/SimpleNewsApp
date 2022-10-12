@@ -13,11 +13,6 @@ Modularisation is done based in feature and then layer
 - news-headline
   - data
   - domain
-- news-headline-india
-  - domain
-  - presentation
-- news-headline-uk
-  - domain
   - presentation
 
 # News API
