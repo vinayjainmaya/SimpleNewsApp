@@ -8,9 +8,6 @@ import com.vinaymj.news.headline.presentation.R
 import com.vinaymj.news.headline.presentation.databinding.NewsItemBinding
 import com.vinaymj.simplenewsapp.core.utils.OnItemClickListener
 
-/**
- * Created by vinaymj on 06/10/22.
- */
 class IndiaNewsAdapter(
     private val listener: OnItemClickListener
 )
@@ -20,9 +17,7 @@ class IndiaNewsAdapter(
 
     inner class IndiaNewsViewHolder(val binding: NewsItemBinding) : RecyclerView.ViewHolder(binding.root) {
         init {
-            binding.rootLayout.setOnClickListener {
-//                listener.onItemClick(items[adapterPosition])
-            }
+            binding.rootLayout.setOnClickListener {}
         }
     }
 

@@ -6,9 +6,6 @@ import com.vinaymj.news.headline.domain.repository.NewsRepository
 import com.vinaymj.simplenewsapp.core.api.Response
 import javax.inject.Inject
 
-/**
- * Created by vinaymj on 06/10/22.
- */
 class NewsRepositoryImpl @Inject constructor(
     private val newsService: NewsService
 ): NewsRepository {

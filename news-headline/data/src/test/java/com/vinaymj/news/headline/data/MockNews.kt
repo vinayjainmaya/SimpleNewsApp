@@ -4,9 +4,6 @@ import com.vinaymj.news.headline.domain.model.Article
 import com.vinaymj.news.headline.domain.model.News
 import com.vinaymj.news.headline.domain.model.Source
 
-/**
- * Created by vinaymj on 07/10/22.
- */
 
 val mockArticle1 = Article(
     author = "Maryam Zakir-Hussain",

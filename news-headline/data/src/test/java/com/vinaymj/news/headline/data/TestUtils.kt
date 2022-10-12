@@ -4,9 +4,6 @@ import okhttp3.mockwebserver.MockResponse
 import okio.buffer
 import okio.source
 
-/**
- * Created by vinaymj on 07/10/22.
- */
 class TestUtils {
 
     companion object {

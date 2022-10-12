@@ -5,9 +5,6 @@ import com.vinaymj.news.headline.domain.model.News
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-/**
- * Created by vinaymj on 06/10/22.
- */
 interface NewsService {
 
     @GET("v2/top-headlines")

@@ -11,9 +11,6 @@ import org.junit.Test
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-/**
- * Created by vinaymj on 07/10/22.
- */
 class NewsServiceTest {
 
     private lateinit var service: NewsService

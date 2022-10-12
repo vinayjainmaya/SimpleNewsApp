@@ -18,8 +18,6 @@ class IndianNewsFragment : Fragment(), com.vinaymj.simplenewsapp.core.utils.OnIt
     private val indianNewsViewModel: IndianNewsViewModel by activityViewModels()
     private lateinit var indiaNewsAdapter: IndiaNewsAdapter
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -29,9 +27,8 @@ class IndianNewsFragment : Fragment(), com.vinaymj.simplenewsapp.core.utils.OnIt
     ): View {
 
         _binding = FragmentIndiaBinding.inflate(inflater, container, false)
-        val root: View = binding.root
 
-        return root
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
