@@ -35,7 +35,7 @@ class IndiaNewsAdapter(
 
     override fun getItemCount() = items.size
 
-    fun setItem(articles: List<Article>?) {
+    internal fun setItem(articles: List<Article>?) {
         articles?.let {
             items = it
         }

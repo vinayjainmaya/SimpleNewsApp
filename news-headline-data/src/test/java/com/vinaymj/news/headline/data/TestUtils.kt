@@ -7,11 +7,17 @@ import okio.source
 class TestUtils {
 
     companion object {
-        fun mockResponse(fileName: String): MockResponse {
+        fun readMockResponse(fileName: String): String? {
             val inputStream = javaClass.classLoader?.getResourceAsStream(fileName)
             val source = inputStream?.source()?.buffer()
-            val mockResponse = MockResponse()
-            source?.readString(Charsets.UTF_8)?.let { mockResponse.setBody(it) }
+            return source?.readString(Charsets.UTF_8)
+        }
+
+        fun getMockResponseObject(fileName: String, responseCode: Int): MockResponse {
+            val mockResponse = MockResponse().setResponseCode(responseCode)
+            readMockResponse(fileName)?.let {
+                mockResponse.setBody(it)
+            }
             return mockResponse
         }
     }

@@ -1,9 +1,8 @@
 package com.vinaymj.news.headline.data.api
 
 import com.vinaymj.news.core.utils.Constants.Companion.API_KEY
-import com.vinaymj.news.headline.data.TestUtils.Companion.mockResponse
-import junit.framework.TestCase.assertEquals
-import junit.framework.TestCase.assertNotNull
+import com.vinaymj.news.headline.data.TestUtils
+import junit.framework.TestCase.*
 import kotlinx.coroutines.runBlocking
 import okhttp3.mockwebserver.MockWebServer
 import org.junit.After
@@ -33,8 +32,11 @@ class NewsServiceTest {
     }
 
     @Test
-    fun `get uk top headlines news`() = runBlocking {
-        server.enqueue(mockResponse("uk_top_headline.json"))
+    fun `get uk top headlines news - success`() = runBlocking {
+        val mockResponseObject = TestUtils.getMockResponseObject(
+            fileName = "uk_top_headline.json", responseCode = 200
+        )
+        server.enqueue(mockResponseObject)
         val responseBody = service.getTopHeadlines("uk", 1)
         val request = server.takeRequest()
         assertNotNull(responseBody.body())
@@ -45,8 +47,11 @@ class NewsServiceTest {
     }
 
     @Test
-    fun `get india top headlines news`() = runBlocking {
-        server.enqueue(mockResponse("in_top_headline.json"))
+    fun `get india top headlines news - success`() = runBlocking {
+        val mockResponseObject = TestUtils.getMockResponseObject(
+            fileName = "in_top_headline.json", responseCode = 200
+        )
+        server.enqueue(mockResponseObject)
         val responseBody = service.getTopHeadlines("in", 1)
         val request = server.takeRequest()
         assertNotNull(responseBody.body())
@@ -59,11 +64,28 @@ class NewsServiceTest {
 
     @Test
     fun `empty country param`() = runBlocking {
-        server.enqueue(mockResponse("error_empty_country.json"))
+        val mockResponseObject = TestUtils.getMockResponseObject(
+            fileName = "error_empty_country.json", responseCode = 200
+        )
+        server.enqueue(mockResponseObject)
+
         val responseBody = service.getTopHeadlines("", 1)
+        assertTrue(responseBody.isSuccessful)
         assertEquals(responseBody.body()?.status, "ok")
         assertEquals(responseBody.body()?.totalResults, 0)
         assertEquals(responseBody.body()?.articles?.size, 0)
+    }
+
+    @Test
+    fun `get top headlines news - fail`() = runBlocking {
+        val mockResponseObject = TestUtils.getMockResponseObject(
+            fileName = "in_top_headline.json", responseCode = 500
+        )
+        server.enqueue(mockResponseObject)
+
+        val responseBody = service.getTopHeadlines("in", 1)
+        assertFalse(responseBody.isSuccessful)
+        assertEquals(responseBody.message(), "Server Error")
     }
 
 }

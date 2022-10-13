@@ -19,15 +19,19 @@ class HomeViewModel @Inject constructor(
 ) : ViewModel() {
 
     private val _news = MutableLiveData<Event<Response<News>>>()
-    val news: LiveData<Event<Response<News>>>
+    internal val news: LiveData<Event<Response<News>>>
         get() = _news
 
-    fun getTopHeadlines(countryCode: String) {
+    internal fun getTopHeadlines(countryCode: String) {
         viewModelScope.launch(Dispatchers.IO) {
             _news.postValue(Event(Response.Loading()))
             try {
                 val response = getUKNewsUseCase.execute(countryCode)
-                _news.postValue(Event(Response.Success(response.data)))
+                _news.postValue(Event(
+                    if (response is Response.Success)
+                        Response.Success(response.data)
+                    else Response.Error(response.errorMessage.toString())
+                ))
             } catch (e: Exception) {
                 _news.postValue(Event(Response.Error(e.message.toString())))
             }
