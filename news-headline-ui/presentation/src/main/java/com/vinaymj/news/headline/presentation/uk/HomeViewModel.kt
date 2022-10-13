@@ -6,8 +6,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.vinaymj.news.headline.domain.model.News
 import com.vinaymj.news.headline.domain.usecase.GetUKNewsUseCase
-import com.vinaymj.simplenewsapp.core.api.Response
-import com.vinaymj.simplenewsapp.core.utils.Event
+import com.vinaymj.news.core.api.Response
+import com.vinaymj.news.core.utils.Event
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

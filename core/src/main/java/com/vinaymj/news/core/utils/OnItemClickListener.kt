@@ -1,4 +1,4 @@
-package com.vinaymj.simplenewsapp.core.utils
+package com.vinaymj.news.core.utils
 
 
 interface OnItemClickListener {

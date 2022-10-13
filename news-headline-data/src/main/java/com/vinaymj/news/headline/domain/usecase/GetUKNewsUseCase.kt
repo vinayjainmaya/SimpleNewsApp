@@ -2,7 +2,7 @@ package com.vinaymj.news.headline.domain.usecase
 
 import com.vinaymj.news.headline.domain.model.News
 import com.vinaymj.news.headline.domain.repository.NewsRepository
-import com.vinaymj.simplenewsapp.core.api.Response
+import com.vinaymj.news.core.api.Response
 import javax.inject.Inject
 
 class GetUKNewsUseCase @Inject constructor(private val repository: NewsRepository) {

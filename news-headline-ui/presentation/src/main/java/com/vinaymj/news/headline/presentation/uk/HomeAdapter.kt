@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.vinaymj.news.headline.domain.model.Article
 import com.vinaymj.news.headline.presentation.R
 import com.vinaymj.news.headline.presentation.databinding.NewsItemBinding
-import com.vinaymj.simplenewsapp.core.utils.OnItemClickListener
+import com.vinaymj.news.core.utils.OnItemClickListener
 
 class HomeAdapter(
     private val listener: OnItemClickListener

@@ -8,8 +8,8 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.vinaymj.news.headline.presentation.databinding.FragmentHomeBinding
-import com.vinaymj.simplenewsapp.core.api.Response
-import com.vinaymj.simplenewsapp.core.utils.OnItemClickListener
+import com.vinaymj.news.core.api.Response
+import com.vinaymj.news.core.utils.OnItemClickListener
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

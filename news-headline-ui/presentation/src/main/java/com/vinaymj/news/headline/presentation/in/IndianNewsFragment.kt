@@ -8,11 +8,12 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.vinaymj.news.headline.presentation.databinding.FragmentIndiaBinding
-import com.vinaymj.simplenewsapp.core.api.Response
+import com.vinaymj.news.core.api.Response
+import com.vinaymj.news.core.utils.OnItemClickListener
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class IndianNewsFragment : Fragment(), com.vinaymj.simplenewsapp.core.utils.OnItemClickListener {
+class IndianNewsFragment : Fragment(), OnItemClickListener {
 
     private var _binding: FragmentIndiaBinding? = null
     private val indianNewsViewModel: IndianNewsViewModel by activityViewModels()

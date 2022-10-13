@@ -1,4 +1,4 @@
-package com.vinaymj.simplenewsapp.core.api
+package com.vinaymj.news.core.api
 
 
 sealed class Response<T>(val data: T? = null, val errorMessage: String? = null) {

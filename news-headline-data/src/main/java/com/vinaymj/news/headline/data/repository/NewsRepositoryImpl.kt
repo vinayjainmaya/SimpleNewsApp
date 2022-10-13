@@ -3,7 +3,7 @@ package com.vinaymj.news.headline.data.repository
 import com.vinaymj.news.headline.data.api.NewsService
 import com.vinaymj.news.headline.domain.model.News
 import com.vinaymj.news.headline.domain.repository.NewsRepository
-import com.vinaymj.simplenewsapp.core.api.Response
+import com.vinaymj.news.core.api.Response
 import javax.inject.Inject
 
 class NewsRepositoryImpl @Inject constructor(
