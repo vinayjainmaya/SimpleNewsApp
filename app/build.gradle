@@ -45,9 +45,8 @@ dependencies {
     implementation "androidx.constraintlayout:constraintlayout:2.1.4"
 
     implementation project(path: ":core")
-    implementation project(path: ":news-headline:data")
-    implementation project(path: ":news-headline:domain")
-    implementation project(path: ":news-headline:presentation")
+    implementation project(path: ":news-headline-data")
+    implementation project(path: ":news-headline-ui:presentation")
 
     // Lifecycle
     def lifecycle = "2.5.1"
