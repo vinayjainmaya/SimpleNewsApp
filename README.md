@@ -14,9 +14,9 @@ Modularisation is done based in feature and then layer
     - presentation
 
 # News API
-We using [NEWS API](https://newsapi.org/) to get data and show in app. Create your own `API Key` and replace `NEWS_KEY`  in `gradle.properties` present in the project root.
+We using [NEWS API](https://newsapi.org/) to get data and show in app. Create your own `API Key` and replace `NEWS_API_KEY`  in `Constants.kt` present in `core` module.
 ```sh
-NEWS_KEY="<NEWS_API_KEY>"
+const val API_KEY = "NEWS_API_KEY"
 ```
 
 # Libraries

@@ -1,7 +1,7 @@
 package com.vinaymj.news.headline.data.api
 
-import com.vinaymj.news.headline.data.TestUtils.Companion.mockResponse
 import com.vinaymj.news.core.utils.Constants.Companion.API_KEY
+import com.vinaymj.news.headline.data.TestUtils.Companion.mockResponse
 import junit.framework.TestCase.assertEquals
 import junit.framework.TestCase.assertNotNull
 import kotlinx.coroutines.runBlocking
