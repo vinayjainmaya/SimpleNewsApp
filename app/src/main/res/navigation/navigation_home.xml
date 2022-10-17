@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.vinaymj.news.headline.presentation.uk.HomeFragment"
+        android:name="com.vinaymj.simplenewsapp.ui.uk.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 

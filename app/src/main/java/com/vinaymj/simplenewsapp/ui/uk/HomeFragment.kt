@@ -1,4 +1,4 @@
-package com.vinaymj.news.headline.presentation.`in`
+package com.vinaymj.simplenewsapp.ui.uk
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,17 +7,17 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import com.vinaymj.news.headline.presentation.databinding.FragmentIndiaBinding
 import com.vinaymj.news.core.api.Response
 import com.vinaymj.news.core.utils.OnItemClickListener
+import com.vinaymj.simplenewsapp.databinding.FragmentHomeBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class IndianNewsFragment : Fragment(), OnItemClickListener {
+class HomeFragment : Fragment(), OnItemClickListener {
 
-    private var _binding: FragmentIndiaBinding? = null
-    private val indianNewsViewModel: IndianNewsViewModel by activityViewModels()
-    private lateinit var indiaNewsAdapter: IndiaNewsAdapter
+    private var _binding: FragmentHomeBinding? = null
+    private val homeViewModel: HomeViewModel by activityViewModels()
+    private lateinit var homeAdapter: HomeAdapter
 
     private val binding get() = _binding!!
 
@@ -26,30 +26,29 @@ class IndianNewsFragment : Fragment(), OnItemClickListener {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
-        _binding = FragmentIndiaBinding.inflate(inflater, container, false)
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        indianNewsViewModel.getTopHeadlines("in")
+        homeViewModel.getTopHeadlines("GB")
         setObserver()
     }
 
     private fun setObserver() {
-        indianNewsViewModel.news.observe(viewLifecycleOwner) { event ->
+        homeViewModel.news.observe(viewLifecycleOwner) { event ->
             event?.getContentIfNotHandled()?.let { response ->
                 when (response) {
                     is Response.Success -> {
                         binding.progressCircular.isVisible = false
-                        indiaNewsAdapter = IndiaNewsAdapter(this)
-                        indiaNewsAdapter.setItem(response.data?.articles)
-                        binding.inNewsList.apply {
-                            adapter = indiaNewsAdapter
+                        homeAdapter = HomeAdapter(this)
+                        homeAdapter.setItem(response.data?.articles)
+                        binding.ukNewsList.apply {
+                            adapter = homeAdapter
                         }
-                        indiaNewsAdapter.notifyDataSetChanged()
+                        homeAdapter.notifyDataSetChanged()
                     }
                     is Response.Loading -> {
                         binding.progressCircular.isVisible = true

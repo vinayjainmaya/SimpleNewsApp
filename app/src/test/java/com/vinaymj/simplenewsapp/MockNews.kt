@@ -1,4 +1,4 @@
-package com.vinaymj.news.headline.presentation
+package com.vinaymj.simplenewsapp
 
 import com.vinaymj.news.headline.domain.model.Article
 import com.vinaymj.news.headline.domain.model.News

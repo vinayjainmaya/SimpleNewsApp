@@ -1,4 +1,4 @@
-package com.vinaymj.news.headline.presentation.uk
+package com.vinaymj.simplenewsapp.ui.uk
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

@@ -1,12 +1,12 @@
-package com.vinaymj.news.headline.presentation.uk
+package com.vinaymj.simplenewsapp.ui.uk
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.vinaymj.news.headline.domain.model.Article
-import com.vinaymj.news.headline.presentation.R
-import com.vinaymj.news.headline.presentation.databinding.NewsItemBinding
 import com.vinaymj.news.core.utils.OnItemClickListener
+import com.vinaymj.simplenewsapp.R
+import com.vinaymj.simplenewsapp.databinding.NewsItemBinding
 
 class HomeAdapter(
     private val listener: OnItemClickListener
