@@ -46,12 +46,8 @@ dependencies {
 
     implementation project(path: ":core")
     implementation project(path: ":news-headline-data")
+    implementation project(path: ":news-headline-domain")
     implementation project(path: ":news-headline-ui:presentation")
-
-    // Lifecycle
-    def lifecycle = "2.5.1"
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle"
 
     // Navigation
     def navigation = "2.5.2"
@@ -63,17 +59,10 @@ dependencies {
     implementation "com.google.dagger:hilt-android:$dagger_hilt"
     kapt "com.google.dagger:hilt-android-compiler:$dagger_hilt"
 
-
     // Retrofit
     def retrofit = "2.9.0"
     implementation "com.squareup.retrofit2:retrofit:$retrofit"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit"
-
-    // coroutines
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
-
-    /* Android Arch Component Work Manager for Kotlin */
-    implementation "androidx.work:work-runtime-ktx:2.7.1"
 
     // Test
     testImplementation "junit:junit:4.13.2"

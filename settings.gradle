@@ -16,5 +16,6 @@ rootProject.name = "SimpleNewsApp"
 include ':app'
 include ':core'
 include ':news-headline-ui:presentation'
+include ':news-headline-domain'
 include ':news-headline-data'
 include ':news-details:presentation'

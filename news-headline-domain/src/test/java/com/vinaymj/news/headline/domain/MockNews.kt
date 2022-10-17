@@ -1,4 +1,4 @@
-package com.vinaymj.news.headline.data
+package com.vinaymj.news.headline.domain
 
 import com.vinaymj.news.headline.domain.model.Article
 import com.vinaymj.news.headline.domain.model.News
