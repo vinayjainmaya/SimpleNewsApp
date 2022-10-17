@@ -3,6 +3,7 @@ package com.vinaymj.simplenewsapp.ui.`in`
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.vinaymj.news.headline.domain.model.Article
 import com.vinaymj.news.core.utils.OnItemClickListener
 import com.vinaymj.simplenewsapp.R
@@ -31,6 +32,13 @@ class IndiaNewsAdapter(
     override fun onBindViewHolder(holder: IndiaNewsViewHolder, position: Int) {
         val item = items[position]
         holder.binding.newsHeadlines.text = item.title
+        item.urlToImage.let { url ->
+            Glide.with(holder.binding.root)
+                .load(url)
+                .override(200, 200)
+                .centerCrop()
+                .into(holder.binding.imageView)
+        }
     }
 
     override fun getItemCount() = items.size
