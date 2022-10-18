@@ -28,6 +28,7 @@ const val API_KEY = "NEWS_API_KEY"
 - [Gson](https://github.com/google/gson) - A serialization/deserialization library to convert Objects into JSON and back
 - [Hilt](https://dagger.dev/hilt/) - A fast dependency injector for Android.
 - [Coroutines](https://github.com/Kotlin/kotlinx.coroutines) - Library Support for coroutines
+- [Glide](https://github.com/bumptech/glide) - Fast and efficient image loading framework
 
 
 # TODO
