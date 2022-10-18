@@ -8,10 +8,9 @@ Modularisation is done based in feature and then layer
     - data
     - domain
     - presentation
-- news-headline
-    - data
-    - domain
-    - presentation
+- news-headline-data
+- news-headline-domain
+
 
 # News API
 We using [NEWS API](https://newsapi.org/) to get data and show in app. Create your own `API Key` and replace `NEWS_API_KEY`  in `Constants.kt` present in `core` module.
