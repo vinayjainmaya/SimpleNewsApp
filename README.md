@@ -21,7 +21,7 @@ const val API_KEY = "NEWS_API_KEY"
 # Libraries
 - [Jetpack](https://developer.android.com/jetpack)
     - [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - Manage UI data to survive configuration changes.
-    - [Data Binding](https://developer.android.com/topic/libraries/data-binding) - Binding data to UI elements viceversa
+    - [View Binding](https://developer.android.com/topic/libraries/view-binding) - It generates a binding class for each XML layout file
     - [Navigation](https://developer.android.com/guide/navigation/) - Handle everything needed for navigation
     - [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) - Notify views when underlying database changes
 - [Retrofit](https://square.github.io/retrofit/) - type safe http client with coroutines support
